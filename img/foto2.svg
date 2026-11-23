@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#CDE9FF"/>
+      <stop offset="1" stop-color="#4267A9"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#fondo)"/>
+  <circle cx="520" cy="70" r="110" fill="#fff" opacity=".12"/>
+  <g transform="translate(70 65)">
+    <rect x="0" y="0" width="180" height="270" rx="25" fill="#F8FAFC" stroke="#1D4B78" stroke-width="8"/>
+    <circle cx="90" cy="135" r="86" fill="#1457A6" opacity=".12"/>
+    <path d="M55 70v130M125 70v130" fill="none" stroke="#1D4B78" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="55" cy="205" r="38" fill="#38BDF8" stroke="#1D4B78" stroke-width="7"/>
+    <circle cx="125" cy="205" r="38" fill="#38BDF8" stroke="#1D4B78" stroke-width="7"/>
+  </g>
+  <g transform="translate(295 55)">
+    <rect x="0" y="0" width="220" height="290" rx="28" fill="#EAF4FF" stroke="#1D4B78" stroke-width="8"/>
+    <rect x="35" y="35" width="150" height="220" rx="18" fill="#1457A6"/>
+    <rect x="51" y="51" width="118" height="188" rx="12" fill="#38BDF8"/>
+    <circle cx="110" cy="145" r="45" fill="#FFFFFF" opacity=".9"/>
+    <circle cx="110" cy="145" r="24" fill="#1457A6"/>
+  </g>
+  <g transform="translate(430 260)">
+    <rect x="0" y="0" width="95" height="40" rx="8" fill="#F8FAFC" stroke="#1D4B78" stroke-width="6"/>
+    <path d="M95 12h18v16h-18M113 16l16 4-16 4z" fill="#38BDF8" stroke="#1D4B78" stroke-width="5"/>
+  </g>
+</svg>

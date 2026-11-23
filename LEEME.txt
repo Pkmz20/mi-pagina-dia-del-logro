@@ -1,0 +1,21 @@
+CÓDIGO BASE - DÍA DEL LOGRO - EPT 4.º DE SECUNDARIA
+
+CÓMO ABRIRLO EN VS CODE
+1. Extrae el archivo .zip (clic derecho > Extraer todo).
+2. En VS Code: Archivo > Abrir carpeta > MI_PAGINA_DIA_DEL_LOGRO.
+3. Clic derecho en index.html > Open with Live Server.
+
+QUÉ DEBES CAMBIAR
+1. En index.html: todo lo que tiene el comentario <!-- CAMBIA -->.
+   - "Mi Marca" aparece 3 veces: en el <title>, en el logo y en el pie.
+   - Títulos, textos de servicios, opiniones y datos de contacto.
+2. En estilos.css: solo los colores de la parte 1 (:root).
+3. En la carpeta img: pon tus fotos con estos nombres:
+   foto1.jpg, foto2.jpg, foto3.jpg
+   Luego, en index.html, cambia foto1.svg por foto1.jpg (igual con 2 y 3).
+
+REGLAS PARA NO PERDERSE
+- No borres las etiquetas que abren y cierran (<section> ... </section>).
+- Los nombres de archivos: en minúsculas, sin espacios ni tildes.
+- Guarda con Ctrl + S y mira el resultado en el navegador.
+- Haz una copia en tu USB y en Drive al terminar.

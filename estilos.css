@@ -1,0 +1,214 @@
+/* =====================================================
+   1. COLORES Y MEDIDAS DE TU MARCA
+   CAMBIA aquí los colores por los de tu marca.
+   Todo lo demás de la página se actualiza solo.
+   ===================================================== */
+:root {
+  --color-principal: #1457A6;
+  --color-claro: #EAF4FF;
+  --color-acento: #38BDF8;
+  --color-texto: #263445;
+  --color-blanco: #FFFFFF;
+  --fuente-principal: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  --radio: 14px;
+}
+
+/* =====================================================
+   2. BASE
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }   /* el menú baja suavemente */
+
+body {
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2 { color: var(--color-principal); }
+
+/* =====================================================
+   3. MENÚ (en celular: logo arriba y menú abajo)
+   ===================================================== */
+.cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background-color: var(--color-principal);
+  position: sticky;       /* el menú se queda arriba */
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 4px;
+  transition: opacity 0.2s;
+}
+
+.menu a:hover { opacity: 0.75; }
+
+/* =====================================================
+   4. PRESENTACIÓN (HERO)
+   ===================================================== */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--color-claro);
+}
+
+.hero h1 { font-size: clamp(2rem, 6vw, 3rem); }   /* crece con la pantalla */
+.hero p  { font-size: 20px; max-width: 600px; }
+
+/* Animación de entrada */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero h1     { animation: aparecer 0.8s ease-out backwards; }
+.hero p      { animation: aparecer 0.8s ease-out 0.2s backwards; }
+.hero .boton { animation: aparecer 0.8s ease-out 0.4s backwards; }
+
+/* =====================================================
+   5. BOTÓN
+   ===================================================== */
+.boton {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--color-principal);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: var(--radio);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.boton:hover {
+  transform: translateY(-4px);
+  background-color: var(--color-acento);
+  color: var(--color-texto);
+}
+
+/* =====================================================
+   6. SECCIONES
+   ===================================================== */
+.seccion {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.seccion h2 { margin-bottom: 30px; font-size: 32px; }
+
+.fondo-claro { background-color: var(--color-claro); }
+
+/* =====================================================
+   7. TARJETAS DE SERVICIOS
+   ===================================================== */
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;          /* bajan a otra fila si no caben */
+  justify-content: center;
+  gap: 24px;
+}
+
+.tarjeta {
+  flex: 1 1 260px;
+  max-width: 340px;
+  background-color: white;
+  border-radius: var(--radio);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);                     /* la tarjeta sube */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tarjeta h3, .tarjeta p { padding: 10px 16px; }
+
+/* =====================================================
+   8. OPINIONES
+   ===================================================== */
+.opinion {
+  flex: 1 1 260px;
+  max-width: 420px;
+  background-color: white;
+  border-left: 6px solid var(--color-principal);
+  border-radius: var(--radio);
+  padding: 20px;
+  text-align: left;
+}
+
+.opinion p  { font-style: italic; margin-bottom: 8px; }
+.opinion h3 { font-size: 16px; color: var(--color-principal); }
+
+/* =====================================================
+   9. CONTACTO Y PIE DE PÁGINA
+   ===================================================== */
+.contacto p { margin-bottom: 8px; }
+.contacto .boton { margin-top: 16px; }
+
+.texto-enlace {
+  color: var(--color-principal);
+  font-weight: bold;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.pie {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-principal);
+  color: white;
+}
+
+/* =====================================================
+   10. PANTALLAS GRANDES (desde 768 px)
+   ===================================================== */
+@media (min-width: 768px) {
+  .cabecera {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 40px;
+  }
+  .hero { min-height: 80vh; }
+  .seccion { padding: 70px 40px; }
+}
